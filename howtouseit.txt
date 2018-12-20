@@ -1,0 +1,28 @@
+How to use the teigernface comparison program:
+
+All of the images in the folder have been transferred into the proper formatting for testing within the program and given the same name, minus the file extension - for example, if you want to use slade4.jpg for testing you simply access it by typing in slade4 as a parameter.
+
+If you have your own image you want to test you can look at lines 128-160 for an example of how to do so, but please note that the image must have a width of 300px and a height of 376px.
+
+To reconstruct an image using a weighted sum of teigernfaces, use reconst_face_with_coeffs(face,amnt) and enter the name of your image instead of 'face' and the amount of teigernfaces you want to test (between 1 and 13) instead of 'amnt'.
+
+For example, to reconstruct slade4 using 8 teigernfaces you would type reconst_face_with_coeffs(slade4, 8)
+
+To compare an image to the set images, there are two options. First is get_closest_match, which will return a list of name-value pairs that is sorted by the least to greatest difference in coefficients (i.e. the closest match will be first on the list).
+
+For example, to get the closest match to slade4, you would type in get_closest_match(slade4)
+
+The second option for comparison is to view a graph of the difference between the coefficients of the given image and those of the set images. This can be done with make_a_graph and it takes the name of the image as a parameter.
+
+For example, to look at the differences between the coefficients of slade4 and the set images, you would type make_a_graph(slade4)
+
+To make an actual image out of a reconstruction, a teigernface, or the average face, use saveimg(x,imgnape) where x is the image vector/list/matrix/whatever you want to have as an image and imgnape is a string consisting of the name you want to give the image and the file extension.
+
+
+NOTE: this has NOT been tested with file formats other than PNG.
+
+For example, to make a copy of slade4, you would type in saveimg(slade4,"copyofslade4.png")
+To make an image out of the average face you would type in saveimg(avgface, "averageface.png")
+And so on.
+
+
