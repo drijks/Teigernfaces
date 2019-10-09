@@ -1,6 +1,8 @@
 # Teigernfaces
 My Teigernface program in python
 
+UPDATE 10/9/2019: There is now a new version, teigernfaces3.py, that uses 31 images instead of 13!
+
 This program was developed for my senior seminar in mathematics and my capstone in computer science at Western Colorado University (formerly Western Colorado State University). It uses linear algebra, specifically SVD and eigenfaces, to determine key features in images of tiger faces and help identify the tiger in a given photograph.
 
 This program uses the PIL, numpy, and matplotlib python libraries. Instructions on how to run the program can be found in the file howtouseit.txt
